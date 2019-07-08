@@ -1,0 +1,26 @@
+/* Initial Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Center Content On Page */
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Web Page UI Styling */
+.daily-tip-wrapper {
+	border: 2px solid #efefef;
+	padding: 20px;
+}
+
+/* Modal Styling */
+.modal {
+	display: none;
+}
