@@ -1,3 +1,6 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300i,500&display=swap');
+
 /* Initial Reset */
 * {
 	margin: 0;
@@ -7,20 +10,79 @@
 
 /* Center Content On Page */
 body {
+	font-size: 62.5%;
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Montserrat', sans-serif;
 }
 
-/* Web Page UI Styling */
-.daily-tip-wrapper {
-	border: 2px solid #efefef;
+/* Web Page UI & Modal Styling */
+.daily-tip-wrapper, .modal {
+	background-color: #fff;
+	border: 3px solid #efefef;
+	border-radius: 6px;
 	padding: 20px;
+	text-align: center;
 }
 
-/* Modal Styling */
 .modal {
+	position: absolute;
 	display: none;
+	z-index: 20;
+}
+
+.daily-tip-title, .modal-title {
+	font-size: 1.75rem;
+}
+
+#daily-tip, .modal-tip {
+	margin: 20px;
+	color: rgba(0,0,0,.5);
+	font-size: 1.35rem;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.daily-tip-edit, .modal-update, .modal-cancel {
+	width: 40%;
+	padding: 10px;
+	margin: 10px;
+	font-size: .75rem;
+	font-weight: 500;
+	border: 1px solid rgba(0,200,255,.85);
+	border-radius: 6px;
+	background-color: rgba(0,200,255,.4);
+}
+
+.modal-controls {
+	display: flex;
+	justify-content: center;
+}
+
+.modal-cancel {
+	background-color: rgba(0,200,255,.2);
+}
+
+.daily-tip-edit:hover, .modal-cancel:hover, .modal-update:hover {
+	cursor: pointer;
+	border: 1px solid rgba(0,100,155,1);
+}
+
+.daily-tip-edit:active, .modal-cancel:active, .modal-update:active {
+	color: #efefef;
+	background-color: rgba(0,100,155,.85);
+}
+
+.solid {
+	display: none;
+	background-color: rgba(0,0,0,.2);
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
 }
